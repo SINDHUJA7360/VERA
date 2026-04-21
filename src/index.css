@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg-main: #0c0d0f;
+  --bg-card: #151619;
+  --color-border: #2d2f36;
+  --color-accent: #f27d26;
+  --color-success: #00ff00;
+  --text-dim: #8e9299;
+  --text-main: #e0e0e0;
+}
+
+body {
+  @apply bg-[#0c0d0f] text-[#e0e0e0] font-sans antialiased m-0 p-0;
+}
+
+/* Elegant Dark Specific Patterns */
+
+.dashboard-grid {
+  @apply grid min-h-screen gap-[1px] bg-[#1a1c20];
+  grid-template-rows: 60px 1fr 40px;
+}
+
+.header-vera {
+  @apply bg-[#0c0d0f] border-b border-[#2d2f36] flex items-center justify-between px-6;
+}
+
+.header-logo-vera {
+  @apply font-extrabold tracking-[4px] text-[#f27d26] text-xl;
+}
+
+.header-status-vera {
+  @apply flex gap-5 text-[10px] text-[#8e9299] font-mono uppercase tracking-wider;
+}
+
+.pane {
+  @apply bg-[#0c0d0f] p-5 flex flex-col gap-4 overflow-y-auto;
+}
+
+.card-vera {
+  @apply bg-[#151619] p-4 border border-[#2d2f36] rounded-[4px];
+}
+
+.label-vera {
+  @apply text-[10px] uppercase tracking-[1px] text-[#8e9299] mb-2 font-semibold;
+}
+
+.value-vera {
+  @apply font-mono text-3xl text-white tracking-tighter;
+}
+
+.stress-meter-vera {
+  @apply h-2 bg-[#1a1c20] rounded-full mt-2.5 overflow-hidden;
+}
+
+.stress-fill-vera {
+  @apply h-full transition-all duration-500 ease-out;
+  background: linear-gradient(90deg, #00ff00, #f27d26);
+}
+
+.log-entry-vera {
+  @apply mb-2 border-l-2 border-[#2d2f36] pl-2 text-[11px] font-mono text-[#a0a0a0] leading-relaxed;
+}
+
+.log-entry-alert {
+  @apply border-l-[#f27d26] text-white;
+}
+
+.footer-vera {
+  @apply bg-[#0c0d0f] border-t border-[#2d2f36] flex items-center justify-between px-6 text-[10px] text-[#5c5f66] uppercase tracking-widest;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0d0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d2f36;
+}

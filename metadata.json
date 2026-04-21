@@ -1,0 +1,6 @@
+{
+  "name": "VERA - Stress Monitoring AI",
+  "description": "A comprehensive stress monitoring platform integrating GSR and Pulse sensors with AI facial recognition and real-time stress analysis.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["AI Analysis", "Hardware Integration", "Real-time Monitoring"]
+}
